@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Photo App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let post of posts" (click)="goDetail(post)">
+    <img src="{{post.path}}">
+    <ion-card-header>
+      <ion-card-title>{{post.title}}</ion-card-title>
+      <p>{{post.created_at}}</p>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openImagePicker()">
+      <ion-icon name="cloud-upload"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

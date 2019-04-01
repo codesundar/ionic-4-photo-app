@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{post.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="{{post.path}}">
+  <p>Created At: {{post.created_at}}</p>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="block" (click)="share()">Share</ion-button>
+</ion-footer>
